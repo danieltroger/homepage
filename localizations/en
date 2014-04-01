@@ -1,0 +1,5 @@
+<?php
+    define("LN_MENU","Menu");
+    define("LN_CLOSE","Close");
+    define("LN_CP","Cool page!");
+    define("LN_WELCOME","Welcome to my homepage, more content comes soon.");

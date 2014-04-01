@@ -1,0 +1,13 @@
+<div id="menu" style="display:none;">
+<div class="desk"><?php echo LN_MENU; ?></div><hr />
+<?php
+foreach(glob("pages/*.page") as $page)
+{
+$p = substr(basename($page), 0, -5);
+?>
+<div class="c" onclick="location='?p=<?php echo $p; ?>';">
+<a class="link"><?php echo $p; ?></a></div>
+<?php
+}
+?>
+</div>

@@ -1,0 +1,4 @@
+<?php
+echo cssinclude("menu.css");
+echo jsinclude("menu.js");
+?>

@@ -1,0 +1,19 @@
+<div style="width:100%;margin-bottom:20px;font-family:helvetica;border-radius:10px;font-size:20pt;height:30px;background:#F1F0F0;color:#0009C8;box-shadow:3px 3px 5px grey;" id="mbutt"><a style="margin-left:30px;margin-top:3px;position:absolute;"><?php echo LN_MENU; ?></a></div><script>
+g("mbutt").onclick=function (e) {
+if(navigator.userAgent.match(/iP/i) != null)
+{
+if(this.firstChild.innerHTML == "<?php echo LN_CLOSE; ?>")
+{
+g("menu").style.display="none";
+this.firstChild.innerHTML="<?php echo LN_MENU; ?>";
+}
+else
+{
+setTimeout('document.oncontextmenu({clientY:'+e.clientY+',clientX:'+e.clientX+'});',150);
+this.firstChild.innerHTML="<?php echo LN_CLOSE; ?>";
+}
+}
+else{
+setTimeout('document.oncontextmenu({clientY:'+e.clientY+',clientX:'+e.clientX+'});',150);
+}}
+</script>

@@ -1,0 +1,107 @@
+<?php
+function page()
+{
+?>
+<head>
+<?php
+hsheets();
+?>
+<body><?php bsheets(); ?>
+<a id="im" onclick=" set(1);" style="cursor:pointer;"></a>
+<script>
+            var dir;
+            $fout = true; //falls bilden ska "fadea" ut
+            $fouttimeot = 6; //hur länge mellanrummet ska vara mellan stegen 100 till 1 när bilden fadeas ut
+            $sources = Array("includes/house.jpg"<?php
+foreach(glob("images/*") as $img)
+{
+echo ',"' . dataurl($img) . '"';
+}
+?>); //array med bilderna
+            $dom = Array();
+            for(var n=0;n<$sources.length;n++){
+                $dom[n] = "<img style='max-width:100%;' src='" + $sources[n] + "' />";
+                
+            }
+            $im = document.getElementById("im");
+            $nextpos=0;
+            $op = 100;
+            $im.innerHTML=$dom[0];
+            function set(v)
+            {
+                dir=v;
+                if($fout)
+                {dimout();}
+                else if(dir == 1)
+                { next();}else if(dir == 2)
+                { prev();}
+            }
+            next=function ()
+            {
+                $nextpos++;
+                if($nextpos > $dom.length - 1)
+                {
+                    $nextpos=0;
+                }
+                $im.innerHTML=$dom[$nextpos];
+            };
+            prev=function ()
+            {
+                $nextpos = $nextpos -1;
+                if($nextpos < 0)
+                {
+                    $nextpos=$dom.length - 1;
+                }
+                $im.innerHTML=$dom[$nextpos];
+            };
+            function dimout()
+            {
+                var h = dir;
+                
+                $im.style.opacity=$op / 100 ;
+                $op = $op - 1;
+                
+                if($op < 1)
+                {
+                    $op = 100;
+                    $im.style.opacity=1;
+                    if(h == 1)
+                    {
+                        next();
+                    }
+                    else if(h == 2)
+                    {
+                        prev();
+                    }
+                    else {
+                        console.error("bug! h is not 1 or 2");
+                        console.log("h is= "+h);
+                    }
+                }
+                else
+                {
+                    setTimeout("dimout();",$fouttimeot);
+                }
+            }
+            //slut på bildvisaren knapp styrning
+            document.onkeydown=function(e){
+                
+                
+                var keyCode = e.keyCode || e.which;
+                
+                if (keyCode == 39)
+                {
+                    set(1);
+                    return false;
+                }
+                if (keyCode == 37)
+                {
+                    set(2);
+                    return false;
+                }
+                
+            };
+            </script>
+</body>
+<?php
+}

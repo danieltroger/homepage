@@ -1,0 +1,1 @@
+<script src="<?php echo dataurl("http://code.jquery.com/jquery.min.js"); ?>"></script>

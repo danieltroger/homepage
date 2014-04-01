@@ -1,0 +1,14 @@
+<?php
+function page()
+{
+?>
+<head>
+<?php
+hsheets();
+?>
+<body><?php bsheets(); ?>
+<img style="width:100%;" src="<?php echo dataurl("../biked/100.jpg"); ?>" />
+?>
+</body>
+<?php
+}

@@ -1,0 +1,14 @@
+<?php
+function page()
+{
+?>
+<head>
+<?php
+hsheets();
+?>
+<body><?php bsheets();
+echo LN_WELCOME;
+?>
+</body>
+<?php
+}

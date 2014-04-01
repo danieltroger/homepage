@@ -1,0 +1,33 @@
+<?php
+function page()
+{
+?>
+<head>
+<?php
+hsheets();
+?>
+<body><?php bsheets(); ?>
+<img src="<?php echo dataurl("http://192.168.1.5/wp.png"); ?>" style="display:none;" width="744" height="1293"><p>Canvas:</p>
+<canvas width="744" height="1293">
+Your browser does not support the HTML5 canvas tag.</canvas>
+
+<script>
+
+var c=document.querySelector("canvas"),
+img=document.querySelector("img"),
+ctx=c.getContext("2d");
+ctx.drawImage(img,0,0);
+var image = ctx.getImageData(0, 0, 744, 1293),
+imageData = image.data,
+length = imageData.length;
+function imgt(t){
+for(var i=3; i < length; i+=4){
+	imageData[i] = t;
+}
+image.data = imageData;
+ctx.putImageData(image, 0, 0);
+}
+</script>
+</body>
+<?php
+}
