@@ -4,7 +4,8 @@ $stdpage = "Startpage";
 $ua = $_SERVER["HTTP_USER_AGENT"];
 $dr = $_SERVER["DOCUMENT_ROOT"] . "/";
 include $dr  . "fb/fb.php";
-$lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
+$gl = $_GET['lang'];
+$lang = !isset($gl) ? substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2) : $gl;
 switch ($lang){
   case "de":
   loi("de");
@@ -28,9 +29,11 @@ function cssinclude($url)
 }
 function mime($file)
 {
+    FB::log("file: {$file}");
   $finfo = finfo_open(FILEINFO_MIME_TYPE);
   $mime =  finfo_file($finfo, $file);
   finfo_close($finfo);
+  FB::log("mime: {$mime}");
   return $mime;
 }
 function dataurl($file)

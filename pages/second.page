@@ -6,9 +6,9 @@ function page()
 <?php
 hsheets();
 ?>
+</head>
 <body><?php bsheets(); ?>
-<img style="width:100%;" src="<?php echo dataurl("../biked/100.jpg"); ?>" />
-?>
+<img style="width:100%;" src="<?php echo dataurl("tistel.jpg"); ?>" />
 </body>
 <?php
 }

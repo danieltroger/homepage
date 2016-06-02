@@ -1,5 +1,5 @@
 <?php
-    define("LN_MENU","Menü");
+    define("LN_MENU","MenÃ¼");
     define("LN_CLOSE","Schliessen");
     define("LN_CP","Coole seite!");
-    define("LN_WELCOME","Willkommen auf meiner homepage, ich werde bald mer inhalt hinzufügen");
+    define("LN_WELCOME","Willkommen auf meiner homepage, ich werde bald mer Inhalt hinzufÃ¼gen");

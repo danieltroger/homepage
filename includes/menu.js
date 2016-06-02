@@ -10,10 +10,10 @@ function selectAll()
 
 document.oncontextmenu=function (e)
 {
-  var menu=document.getElementById("menu"), mst=menu.style,d=document,w=window;
-  mst.top=e.clientY+(d.all ? d.scrollTop : w.pageYOffset)+"px";
-  mst.left=e.clientX+(d.all ? d.scrollLeft : w.pageXOffset)+"px";
-  mst.display="";
+  var menu = document.getElementById("menu"), mst=menu.style,d=document,w=window;
+  mst.top = e.clientY+(d.all ? d.scrollTop : w.pageYOffset)+"px";
+  mst.left = e.clientX+(d.all ? d.scrollLeft : w.pageXOffset)+"px";
+  mst.display = "";
   if(e.shiftKey)
   {
     return true;

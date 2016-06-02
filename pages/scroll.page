@@ -6,7 +6,8 @@ function page()
 <?php
 hsheets();
 ?>
-<body style="color:white;font-family:helvetica;background:url(<?php echo dataurl("http://192.168.1.5/wp.png"); ?>);"><?php bsheets(); ?>
+</head>
+<body style="color:white;font-family:helvetica;background:url(<?php echo dataurl("img.jpg"); ?>);"><?php bsheets(); ?>
 <?php echo LN_CP; ?><br />Blablablabla<br /> blablablalbalbla<br />Blablablabla<br /> blablablalbalbla<br />Blablablabla<br /> blablablalbalbla<br />Blablablabla<br /> blablablalbalbla<br />Blablablabla<br /> blablablalbalbla<br />Blablablabla<br /> blablablalbalbla<br />Blablablabla<br /> blablablalbalbla<br />Blablablabla<br /> blablablalbalbla<br />Blablablabla<br /> blablablalbalbla<br />Blablablabla<br /> blablablalbalbla<br />Blablablabla<br /> blablablalbalbla<br />Blablablabla<br /> blablablalbalbla<br />Blablablabla<br /> blablablalbalbla<br />Blablablabla<br /> blablablalbalbla<br />Blablablabla<br /> blablablalbalbla<br />Blablablabla<br /> blablablalbalbla<br />Blablablabla<br /> blablablalbalbla<br />Blablablabla<br /> blablablalbalbla<br />Blablablabla<br /> blablablalbalbla<br />Blablablabla<br /> blablablalbalbla<br />Blablablabla<br /> blablablalbalbla<br />Blablablabla<br /> blablablalbalbla<br />Blablablabla<br /> blablablalbalbla<br />Blablablabla<br /> blablablalbalbla<br />Blablablabla<br /> blablablalbalbla<br />Blablablabla<br /> blablablalbalbla<br />Blablablabla<br /> blablablalbalbla<br />Blablablabla<br /> blablablalbalbla<br />Blablablabla<br /> blablablalbalbla<br />Blablablabla<br /> blablablalbalbla<br />Blablablabla<br /> blablablalbalbla<br />Blablablabla<br /> blablablalbalbla
 </body>
 <?php

@@ -6,27 +6,58 @@ function page()
 <?php
 hsheets();
 ?>
+<style>
+body
+{
+	-webkit-animation-name: bgchange;
+	-webkit-animation-duration: 20s;
+	animation-name: bgchange;
+	animation-duration: 20s;
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+}
+@-webkit-keyframes bgchange {
+    0%{background: white;}
+		20%{background:green;}
+		40%{background: blue;}
+		60%{background: red;}
+		80%{background: black;}
+		100%{background: white;}
+}
+
+@keyframes bgchange {
+    0%{background: white;}
+		20%{background:green;}
+		40%{background: blue;}
+		60%{background: red;}
+		80%{background: black;}
+		100%{background: white;}
+}
+</style>
+</head>
 <body><?php bsheets(); ?>
-<img src="<?php echo dataurl("http://192.168.1.5/wp.png"); ?>" style="display:none;" width="744" height="1293"><p>Canvas:</p>
-<canvas width="744" height="1293">
+<img src="<?php echo dataurl("img.jpg"); ?>" style="display:none;" width="5200" height="3468"><p>Canvas:</p>
+<canvas width="5200" height="3468">
 Your browser does not support the HTML5 canvas tag.</canvas>
 
 <script>
 
-var c=document.querySelector("canvas"),
-img=document.querySelector("img"),
-ctx=c.getContext("2d");
+var c = document.querySelector("canvas"),
+img = document.querySelector("img"),
+ctx = c.getContext("2d");
 ctx.drawImage(img,0,0);
-var image = ctx.getImageData(0, 0, 744, 1293),
+var image = ctx.getImageData(0, 0, 2000, 1226),
 imageData = image.data,
 length = imageData.length;
-function imgt(t){
-for(var i=3; i < length; i+=4){
-	imageData[i] = t;
+for(var i=0; i < length; i+=4){
+	/*var t1 = imageData[i],
+	t2 = imageData[i+1],
+	t3 = imageData[i+2],
+	t3 = imageData[i+3];*/
+	imageData[i+3] = 200;
 }
 image.data = imageData;
 ctx.putImageData(image, 0, 0);
-}
 </script>
 </body>
 <?php

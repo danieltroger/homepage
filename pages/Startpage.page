@@ -6,6 +6,7 @@ function page()
 <?php
 hsheets();
 ?>
+</head>
 <body><?php bsheets();
 echo LN_WELCOME;
 ?>

@@ -1,0 +1,10 @@
+p
+{
+  max-width: 80%;
+  background: lightgrey;
+  left: 50%;
+  position: relative;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  padding: 1%;
+}

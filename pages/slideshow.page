@@ -6,12 +6,13 @@ function page()
     <?php
     hsheets();
     ?>
+    </head>
     <body><?php bsheets(); ?>
       <a id="im" onclick=" set(1);" style="cursor:pointer;"></a>
       <script>
       var dir;
       $fout = true; //falls bilden ska "fadea" ut
-      $fouttimeot = 6; //hur länge mellanrummet ska vara mellan stegen 100 till 1 när bilden fadeas ut
+      $fouttimeot = 1; //hur länge mellanrummet ska vara mellan stegen 100 till 1 när bilden fadeas ut
       $sources = Array("includes/house.jpg"<?php
       foreach(glob("images/*") as $img)
       {
