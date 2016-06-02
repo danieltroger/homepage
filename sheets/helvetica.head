@@ -1,7 +1,7 @@
 <script>$(document).ready(function () {
-if(document.body.style.fontFamily.length < 1)
-{
-document.body.style.fontFamily="Helvetica";
-console.log("Set font to Helvetica");
-}
+  if(document.body.style.fontFamily.length < 1)
+  { 
+    document.body.style.fontFamily="Helvetica";
+    console.log("Set font to Helvetica");
+  }
 });</script>

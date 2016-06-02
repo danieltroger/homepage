@@ -1,4 +1,6 @@
-<script>function g(id)
+<script>
+function g(id)
 {
 return document.getElementById(id);
-}</script>
+}
+</script>

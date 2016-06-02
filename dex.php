@@ -2,11 +2,11 @@
 require "base.php";
 if(isset($_REQUEST["p"]))
 {
-pagel($_REQUEST["p"]);
+  pagel($_REQUEST["p"]);
 }
 else
 {
-pagel($stdpage);
+  pagel($stdpage);
 }
 ?>
 <!DOCTYPE html>
